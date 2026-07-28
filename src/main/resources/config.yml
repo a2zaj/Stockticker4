@@ -1,0 +1,22 @@
+# Get a free API key at https://finnhub.io/register
+api-key: "YOUR_FINNHUB_API_KEY"
+
+# How often to refresh prices, in seconds. Keep this >= 20 to stay well within
+# Finnhub's free-tier rate limit (60 calls/minute), especially if you add more tickers.
+refresh-seconds: 30
+
+# Whether to show the always-on sidebar scoreboard of tickers. Off by default —
+# stock signs work independently of this and don't need it enabled.
+enable-scoreboard: false
+
+# Tickers to track and display on the scoreboard (only used if enable-scoreboard: true above).
+# Stock signs placed in-world track their own tickers separately and don't need
+# to be listed here.
+tickers:
+  - "AAPL"
+  - "MSFT"
+  - "TSLA"
+  - "NVDA"
+
+# Scoreboard sidebar title (color codes with '&' are supported)
+scoreboard-title: "&a&lStock Ticker"

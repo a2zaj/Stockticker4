@@ -1,0 +1,29 @@
+name: StockTicker
+version: '1.0.0'
+main: com.example.stockticker.StockTicker
+api-version: '1.21'
+author: You
+description: Displays live stock/NASDAQ quotes on a scoreboard sidebar.
+
+commands:
+  stocks:
+    description: Manage the StockTicker plugin
+    usage: /stocks reload
+    permission: stockticker.admin
+    permission-message: You don't have permission to do that.
+  stockdisplay:
+    description: Create or remove big black-background stock displays
+    usage: /stockdisplay create <ticker> [scale] | /stockdisplay remove [radius] | /stockdisplay list
+    permission: stockticker.display
+    permission-message: You don't have permission to do that.
+
+permissions:
+  stockticker.admin:
+    description: Allows reloading the StockTicker config
+    default: op
+  stockticker.sign:
+    description: Allows placing [stock] signs that display live prices
+    default: true
+  stockticker.display:
+    description: Allows creating big black-background stock displays
+    default: true
